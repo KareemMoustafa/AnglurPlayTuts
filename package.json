@@ -2,17 +2,20 @@
   "name": "test-app",
   "version": "0.0.0",
   "scripts": {
-    "preinstall": "npm config set package-lock false",
-    "start": "node server.js",
-    "build": "npm install",
     "ng": "ng",
+    "start": "ng serve",
     "heroku-postbuild": "ng build --prod",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
+  "engines": {
+    "node": "14.17.6",
+    "npm": "6.14.15"
+  },
   "dependencies": {
-    
+    "@angular/animations": "~12.1.0",
     "@angular/common": "~12.1.0",
     "@angular/compiler": "~12.1.0",
     "@angular/core": "~12.1.0",
@@ -26,7 +29,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.4",
-    "@angular/cli": "^13.1.3",
+    "@angular/cli": "^12.1.3",
     "@angular/compiler-cli": "^12.1.5",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
@@ -37,9 +40,5 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.2"
-  },
-  "engines": {
-    "node": "14.17.6",
-    "npm": "6.14.15"
   }
 }
